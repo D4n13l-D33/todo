@@ -10,8 +10,8 @@ contract Todo {
 
     Todos [] todolist;
 
-    function createTodo () public {
-        todolist.push();
+    function createTodo (string memory _title, string memory _description) public {
+        todolist.push(Todos(_title, _description, false ));
     }
 
     function updateTitle (string memory _title, uint i) public {
